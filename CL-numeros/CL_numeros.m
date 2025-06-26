@@ -10,7 +10,7 @@ function CL_numeros
   alfa = 0.00001;
 
   for i = 1:3500
-    l = (padroes*w - rotulos);
+    l = (padroes*w - rotulos)
     w = w-alfa*padroes'*l;
   endfor
   f = padroes*w;
@@ -28,13 +28,13 @@ function CL_numeros
   taxa_acertos = acertos / size(rotulos,2);
   #taxa de acertos: 100%
   disp(['taxa de acertos: ',num2str(taxa_acertos*100),'%']);
-  
+
 
 
 end
 
 function out = turn_one_hot(rotulos)
-  out = zeros(length(rotulos),max(rotulos+1));
+  out = zeros(length(rotulos),max(+1));
   
   for i = 1:length(rotulos)
     out(i,rotulos(i)+1) = 1;

@@ -10,8 +10,8 @@ function CL_brincos_pseudoinversa
   #padroes(:,6) = padroes(:,4).*padroes(:,3);
   #padroes(:,3) = padroes(:,1).^3; #95%
   #padroes(:,4) = padroes(:,2).^3; #95%
-  #padroes(:,3) = sin(2*pi*1/10*padroes(:,1)); #96,4%
-  #padroes(:,4) = sin(2*pi*1/100*padroes(:,2)); #96,4%
+  padroes(:,3) = sin(2*pi*1/10*padroes(:,1)); #96,4%
+  padroes(:,4) = sin(2*pi*1/100*padroes(:,2)); #96,4%
   padroes(:,5) = ones(size(X(:,1),1),1);
   rotulos = zeros(length(c1),2);
   rotulos(c1,1)=1;
